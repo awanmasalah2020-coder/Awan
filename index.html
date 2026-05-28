@@ -1,18 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Belajar Tombol HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Belajar Awan</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      background:#f0f4ff;
+      font-family:Arial, sans-serif;
+
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:375px;
+      min-height:100vh;
+
+      background:white;
+      padding:20px;
+      box-sizing:border-box;
+    }
+
+    h1{
+      text-align:center;
+      color:#3b82f6;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:10px;
+
+      background:#3b82f6;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#2563eb;
+    }
+
+    #hasil{
+      margin-top:20px;
+      text-align:center;
+      font-size:20px;
+      color:#111827;
+      font-weight:bold;
+    }
+  </style>
 </head>
 <body>
 
-  <button onclick="tampilkanPesan()">
-    Klik Saya
-  </button>
+  <div class="container">
 
-  <p id="hasil"></p>
+    <h1>Belajar Awan</h1>
+
+    <button onclick="tampilkanPesan()">
+      Klik Saya
+    </button>
+
+    <div id="hasil"></div>
+
+  </div>
 
   <script>
-    function tampilkanPesan() {
+    function tampilkanPesan(){
       document.getElementById("hasil").innerHTML = "HALLO world";
     }
   </script>
